@@ -1,0 +1,46 @@
+/* Article List - refined grid with subtle interactions */
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.article-card {
+  position: relative;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  background: var(--bg-elevated);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.article-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+}
+
+.article-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: var(--space-sm) 0 var(--space-xs);
+  line-height: 1.35;
+}
+
+.article-card p {
+  margin: 0;
+  color: var(--text-tertiary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.article-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  color: var(--text-tertiary);
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
